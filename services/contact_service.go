@@ -61,6 +61,6 @@ func (s *service) UpdateContact(ID int, contactRequest utils.GetContactRequest) 
 func (s *service) DeleteContact(ID int) (models.Contact, error) {
 	contact, err := s.repository.FindContactByID(ID)
 
-	newBook, err := s.repository.DeleteContact(contact)
-	return newBook, err
+	newContact, err := s.repository.DeleteContact(contact)
+	return newContact, err
 }
